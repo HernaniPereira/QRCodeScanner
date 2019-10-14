@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
                 if (result.getContents() == null) {
                     Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show()
                 } else {
-                    Toast.makeText(this, "Scanned: " + result.contents, Toast.LENGTH_LONG).show()
                     val doc: Document? = convertStringToXMLDocument(result.contents)
                     //convertStringToXMLDocument(doc)
                     var matricula =doc?.firstChild?.firstChild?.firstChild?.nodeValue
